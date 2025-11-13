@@ -1,0 +1,53 @@
+/* All styles are handled by Tailwind CSS in the template file. */
+/* This file is here to satisfy the styleUrls property in the component decorator. */
+
+/* Custom styles for new interactive components */
+
+/* For the chat bubble tail */
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-width: 0; /* Remove bottom part of the triangle */
+  margin-bottom: -1px; /* Overlap slightly to prevent gap */
+}
+
+.chat-bubble-bot::after {
+  left: -8px;
+  border-right-color: #e5e7eb; /* gray-200 */
+  border-top-width: 10px;
+  border-bottom-width: 0px;
+
+}
+
+.dark .chat-bubble-bot::after {
+  border-right-color: #2c2c2e; /* custom dark gray for chat bubble bg */
+}
+
+.chat-bubble-user::after {
+  right: -8px;
+  border-left-color: #2563eb; /* blue-600 */
+  border-top-width: 10px;
+  border-bottom-width: 0;
+}
+
+/* Typing indicator animation */
+.typing-dot {
+  animation: typing-blink 1.5s infinite;
+}
+
+@keyframes typing-blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
