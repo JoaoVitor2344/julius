@@ -19,3 +19,4 @@ View your app in AI Studio: https://ai.studio/apps/drive/1e_Sj2wy6zAELRk9vETBG8z
 3. Run the app:
    `npm run dev`
 # julius
+# julius
